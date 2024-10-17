@@ -3,7 +3,7 @@ import Info from "../cards/Info.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-
+import Button from "../shared/Button.astro";
 ---
 
 <section id="about-us">
@@ -38,6 +38,15 @@ import Title from "../shared/Title.astro";
                 businesses; you will dramatically increase your chances for success. I have been there and done that and I want to see you succeed because I 
                 care more about your success than my own.
             </Paragraph>
+        </div>
+    </Container>
+    <Container className="mt-8 text-center">
+        <div>
+            <Button variant={"primary"} className={"min-w-max"}>
+                <span class="hidden sm:flex relative z-[5]">
+                    Book Your Free Discovery Call
+                </span>
+            </Button>
         </div>
     </Container>
 </section>

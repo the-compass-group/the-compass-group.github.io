@@ -10,8 +10,7 @@ module.exports = {
 				"box-shadow": "rgb(var(--box-sd))",
 				"box-border": "rgb(var(--box-border))",
 				primary: { 
-					DEFAULT: '#C2B59B',  
-					50: '#FFFFFF',
+					DEFAULT: '#C2B59B',
 					100: '#FFFFFF',
 					200: '#F0EDE7',
 					300: '#E1DBCE',

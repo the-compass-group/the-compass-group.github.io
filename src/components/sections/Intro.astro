@@ -1,0 +1,56 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import Button from "../shared/Button.astro";
+---
+
+<section id="intro">
+    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12 text-center">
+        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
+            <Title>
+                Gregg Prockton CPA CMA
+            </Title>
+            <Paragraph className="mt-8">
+                <strong>Certified Business Coach</strong>
+            </Paragraph>
+            <Paragraph className="mt-6">
+                Gregg has been a trusted business advisor and coach for over 30-years.
+                His diversified experience gives him the ability to provide a unique
+                perspective that few others bring to the table.
+            </Paragraph>
+            <Paragraph className="mt-4">
+                Gregg has not only helped dozens of small business owners navigate
+                their pain points and help them find success; he has started, operated,
+                and sold multiple small businesses himself. Gregg has experienced the
+                pain points firsthand and knows what it takes to work past them and be
+                successful.
+            </Paragraph>
+            <Paragraph className="mt-4">
+                Gregg's clients place their trust in him, not just because he gives them
+                the results they expect, but because they know that he values their
+                success more than his own.
+            </Paragraph>
+        </div>
+        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0  lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
+            <div class="w-full h-80 sm:h-96 midmd:h-full relative">
+                <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
+                <div class="absolute  p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-primary-900 rounded-full blur-3xl opacity-60"></div>
+                
+                <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-primary-900 opacity-40 blur-2xl left-0 bottom-0"></span>
+                <img src={"/images/gp.jpg"} alt="banner image" 
+                width="1240" height="1385"
+                class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full rounded-3xl" />
+            </div>
+        </div>
+    </Container>
+    <Container className="mt-8 text-center">
+        <div>
+            <Button variant={"primary"} className={"min-w-max"}>
+                <span class="hidden sm:flex relative z-[5]">
+                    Book Your Free Discovery Call
+                </span>
+            </Button>
+        </div>
+    </Container>
+</section>

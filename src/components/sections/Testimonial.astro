@@ -1,0 +1,79 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import { testimonials } from "../../data/testimonials.ts";
+
+type TestimonialsProps = {
+    name: string;
+    roles: string[];
+    quote: string;
+    image: string;
+};
+---
+
+<sectio id="testimonial" className="my-8">
+	<Container className="container flex flex-col items-center p-4 mx-auto space-y-6 md:p-8">
+        <Title>Results</Title>
+        <div class="relative w-full overflow-hidden dark:text-gray-900">
+            <button aria-label="Slide back" id="prev" type="button" class="absolute left-0 top-1/2 z-30 p-2 ml-4 bg-opacity-50 rounded-full focus:outline-none focus:dark:bg-primary-600 focus:ring-2 focus:ring-offset-2 focus:dark:ring-primary-600 dark:bg-primary-100">
+                <svg width="8" height="14" fill="none" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
+                    <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <div id="slider" class="flex w-full transition-transform duration-300 ease-in-out">
+                {testimonials.map((t: TestimonialsProps) => (
+                    <div class="flex flex-col items-center justify-center w-full h-full flex-shrink-0">
+                        <div class="max-w-4xl mx-auto px-4 text-center">
+                            <Paragraph className="mb-8 font-semibold sm:font-bold dark:text-white">
+                                "{t.quote}"
+                            </Paragraph>
+                            <div class="flex flex-col items-center space-y-4">
+                                <img src={t.image} alt="" class="w-20 h-20 bg-center bg-cover rounded-full bg-white" />
+                                <div class="text-center dark:text-white">
+                                    <p class="font-bold text-lg ">{t.name}</p>
+                                    <div class="text-sm">
+                                        {t.roles.map((r) => (
+                                            <p>{r}</p>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <button aria-label="Slide forward" id="next" class="absolute right-0 top-1/2 z-30 p-2 mr-4 bg-opacity-50 rounded-full focus:outline-none focus:dark:bg-primary-600 focus:ring-2 focus:ring-offset-2 focus:dark:ring-primary-600 dark:bg-primary-100">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
+                    <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+	</Container>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('slider'); //document.querySelector('.flex.w-full.h-full');
+        const slides = slider ? slider.children : null;
+        const prevButton = document.getElementById('prev'); //document.querySelector('[aria-label="Slide back"]');
+        const nextButton = document.getElementById('next'); //document.querySelector('[aria-label="Slide forward"]');
+        let currentIndex = 0;
+
+        function showSlide(index: number) {
+            if(slider){
+                slider.style.transform = `translateX(-${index * 100}%)`;
+            }
+        }
+
+        prevButton?.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + (slides?.length || 1) )% (slides?.length || 1);
+            showSlide(currentIndex);
+        });
+
+        nextButton?.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % (slides?.length || 1);
+            showSlide(currentIndex);
+        });
+    });
+</script>
