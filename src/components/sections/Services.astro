@@ -1,9 +1,9 @@
 ---
 import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 import { services } from "../../data/services.ts";
+import Button from "../shared/Button.astro";
 
 type ServicesProps = {
     title: string;
@@ -16,7 +16,7 @@ type ServicesProps = {
     <Container className="space-y-10 md:sapce-y-12">
         <div class="text-center max-w-3xl mx-auto space-y-4">
             <Title>
-                Solve the most common pain points of ...
+                The most common pain points of ...
             </Title>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -28,6 +28,15 @@ type ServicesProps = {
                     );
                 })
             }
+        </div>
+    </Container>
+    <Container className="mt-8 text-center">
+        <div>
+            <Button variant={"primary"} className={"min-w-max"}>
+                <span class="hidden sm:flex relative z-[5]">
+                    Book Your Free Discovery Call
+                </span>
+            </Button>
         </div>
     </Container>
 </section>
