@@ -1,0 +1,48 @@
+---
+import Container from '../components/shared/Container.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Compass Group">
+	<main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+        <section class="relative pt-32 lg:pt-48">
+            <Container>
+                <div data-form-slug="8343126222862807" data-env="production" data-path="contact-us/8343126222862807" class="keap-custom-form">
+            </Container>
+        </section>
+        </div>
+	</main>
+</Layout>
+
+
+<script>
+    (function (window, document) {
+        const keapForms = window.keapForms || {
+            SNIPPET_VERSION: '1.1.0',
+            appId: 'kgg680',
+        };
+    
+        const script = document.createElement('script');
+    
+        script.type = 'text/javascript';
+        script.crossOrigin = 'anonymous';
+        script.defer = true;
+        script.src = 'https://forms.keap.app/lib/public-form-embed.js?appId=kgg680&version=1.1.0';
+    
+        script.onload = function () {
+            const keapFormsAfterLoad = window.keapForms;
+    
+            if (!keapFormsAfterLoad.renderAllForms) {
+                // eslint-disable-next-line no-console
+                console.error('[Keap Forms] Error: could not load');
+            } else if (!keapFormsAfterLoad.invoked) {
+                keapFormsAfterLoad.invoked = true;
+                keapFormsAfterLoad.renderAllForms();
+            }
+        };
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+    
+        firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
+        window.keapForms = keapForms;
+    }(window, document));
+</script>
