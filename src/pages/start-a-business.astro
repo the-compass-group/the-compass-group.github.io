@@ -1,0 +1,48 @@
+---
+import Button from '../components/shared/Button.astro';
+import Container from '../components/shared/Container.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Compass Group - Starting a Business">
+	<main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+        <section class="relative pt-32 lg:pt-48">
+            <Container>
+                <h2 class="pb-4 text-4xl text-center">Starting a Business</h2>
+                <h3 class="pb-10 text-base text-center">DO ANY OF THESE RESONATE WITH YOU?</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+                        <div class="mt-6 space-y-4 relative text-center">
+                            <h4 class="pb-4 text-2xl">Overwhelmed?</h4>
+                            <p>Are you feeling overwhelmed because you don’t know where to start? Whether your idea could work or not?</p>
+                        </div>
+                        <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+                        <div class="mt-6 space-y-4 relative text-center">
+                            <h4 class="pb-4 text-2xl">Anxious?</h4>
+                            <p>Are you feeling anxious that you’re going to fail like the majority of other start-ups? Or how to fund it?</p>
+                        </div>
+                        <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+                        <div class="mt-6 space-y-4 relative text-center">
+                            <h4 class="pb-4 text-2xl">Stuck?</h4>
+                            <p>Are you feeling stuck because you’re lacking the business acumen and are worried it will hurt your chances of success?</p>
+                        </div>
+                        <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+                    </div>
+                </div>
+            </Container>
+            <Container className="mt-8 text-center">
+                <div>
+                    <Button variant={"primary"} className={"min-w-max"}>
+                        <span class="hidden sm:flex relative z-[5]">
+                            Book Your Free Discovery Call
+                        </span>
+                    </Button>
+                </div>
+            </Container>
+        </section>
+	</main>
+</Layout>

@@ -1,0 +1,48 @@
+---
+import Button from '../components/shared/Button.astro';
+import Container from '../components/shared/Container.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Compass Group - Buying or Selling a Business">
+	<main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+        <section class="relative pt-32 lg:pt-48">
+            <Container>
+                <h2 class="pb-4 text-4xl text-center">Buying or Selling a Business</h2>
+                <h3 class="pb-10 text-base text-center">DO ANY OF THESE RESONATE WITH YOU?</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+                        <div class="mt-6 space-y-4 relative text-center">
+                            <h4 class="pb-4 text-2xl">Overwhelmed?</h4>
+                            <p>Are you feeling overwhelmed with all of the moving parts: operational transition, legal, accounting, etc.?</p>
+                        </div>
+                        <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+                        <div class="mt-6 space-y-4 relative text-center">
+                            <h4 class="pb-4 text-2xl">Anxious?</h4>
+                            <p>Are you feeling anxious that your asking price was too low or your offer price was too high? Or funding could fall through?</p>
+                        </div>
+                        <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+                        <div class="mt-6 space-y-4 relative text-center">
+                            <h4 class="pb-4 text-2xl">Stuck?</h4>
+                            <p>Are you feeling stuck in the process; that things aren’t moving fast enough? Or that you’re not sure if it’s time to exit?</p>
+                        </div>
+                        <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+                    </div>
+                </div>
+            </Container>
+            <Container className="mt-8 text-center">
+                <div>
+                    <Button variant={"primary"} className={"min-w-max"}>
+                        <span class="hidden sm:flex relative z-[5]">
+                            Book Your Free Discovery Call
+                        </span>
+                    </Button>
+                </div>
+            </Container>
+        </section>
+	</main>
+</Layout>

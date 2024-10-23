@@ -8,7 +8,8 @@ import Button from "../shared/Button.astro";
 type ServicesProps = {
     title: string;
     description: string;
-    icon: string
+    icon: string;
+    page: string;
 };
 ---
 
@@ -23,8 +24,7 @@ type ServicesProps = {
             {
                 services.map((service: ServicesProps) => {
                     return (
-                        <Service title={service.title} description={service.description} icon={service.icon}>
-                        </Service>
+                        <Service title={service.title} description={service.description} icon={service.icon} page={service.page} />
                     );
                 })
             }
