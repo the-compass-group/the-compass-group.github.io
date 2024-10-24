@@ -1,10 +1,9 @@
 const testimonials = [
     {
-        name: "Sarah Hegedus",
-        roles: ["Founder, Date'd Nutrition LLC"],
-        quote: "I’ve met dozens of entrepreneurs in the last few years and Gregg is without a doubt the most knowledgeable, straightforward, innovative thinking of them all. Gregg genuinely wants to help entrepreneurs. He is a walking small business development center.",
-        image: "/images/dated_nutrition.png"
-
+        name: "Dana Cornell, CFP, CIMA",
+        roles: ["Founder, Cornell Capital Holdings"],
+        quote: "I’ve had the privilege of working with Gregg over the last 10-years on multiple levels. On the business consulting side, I’ve never met someone as well rounded and diligent in the process to be able to so quickly define a problem and diagnose a solution. Our relationship quickly grew to coaching, personal and professional. Gregg’s sincerity and unique ability to focus on others builds a lifelong bond and is something that’s invaluable.",
+        image: "/images/cornell_captial_holdings.jpg"
     },
     {
         name: "Robert Johnson",
@@ -26,12 +25,6 @@ const testimonials = [
 
     },
     {
-        name: "Dana Cornell, CFP, CIMA",
-        roles: ["Founder, Cornell Capital Holdings"],
-        quote: "I’ve had the privilege of working with Gregg over the last 10-years on multiple levels. On the business consulting side, I’ve never met someone as well rounded and diligent in the process to be able to so quickly define a problem and diagnose a solution. Our relationship quickly grew to coaching, personal and professional. Gregg’s sincerity and unique ability to focus on others builds a lifelong bond and is something that’s invaluable.",
-        image: "/images/cornell_captial_holdings.jpg"
-    },
-    {
         name: "Maxine Jimerson",
         roles: ["Owner, MJ Enterprises", "Owner, MJ Development", "Owner MJ Leasing"],
         quote: "Gregg has worked with me and my businesses for more than 20-years. He has worked tirelessly to guide me and I could not be more satisfied. I would highly recommend Gregg if you’re looking for high-level support from someone who will always be there for you.",
@@ -43,6 +36,13 @@ const testimonials = [
         quote: "Gregg is the type of person you can trust will give you an honest, thoughtful answer to any type of question you ask of him. His expertise in the business world is immediately apparent when working with him and he quickly became a go-to for many topics as I've been growing in my career and chasing my entrepreneurial dream. Gregg's mentorship is invaluable and I look forward to any chance I have to interact with him.",
         image: "/images/pj.png"
     },
+    {
+        name: "Sarah Hegedus",
+        roles: ["Founder, Date'd Nutrition LLC"],
+        quote: "I’ve met dozens of entrepreneurs in the last few years and Gregg is without a doubt the most knowledgeable, straightforward, innovative thinking of them all. Gregg genuinely wants to help entrepreneurs. He is a walking small business development center.",
+        image: "/images/dated_nutrition.png"
+
+    }
 ]
 
 export { testimonials };

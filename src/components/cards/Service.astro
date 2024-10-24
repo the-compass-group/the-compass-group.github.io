@@ -17,8 +17,8 @@ const {title, description, icon, page} = Astro.props
         </a>
     </div>
     <div class="mt-6 space-y-4 relative">
-        <h2 class="text-lg md:text-xl font-semibold text-heading-2">
-            {title}
+        <h2 class="text-lg md:text-xl font-semibold text-heading-2 underline">
+           <a href={page}>{title}</a>
         </h2>
         <Paragraph>
             {description}
