@@ -2,7 +2,7 @@
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-import Button from "../shared/Button.astro";
+import BtnLink from "../shared/BtnLink.astro";
 ---
 
 <section id="features" class="bg-neutral-50 dark:bg-neutral-900 py-20">
@@ -63,13 +63,11 @@ import Button from "../shared/Button.astro";
             </div>
         </div>
     </Container>
-    <Container className="mt-8">
-        <div>
-            <Button variant={"primary"} className={"min-w-max"}>
-                <span class="hidden sm:flex relative z-[5]">
-                    Book Your Free Discovery Call
-                </span>
-            </Button>
+    <Container className="mt-8 flex">
+        <div class="mx-auto">
+            <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
+                <BtnLink text="Book Your Free Discovery Call" href="https://letsmeet.io/greggprockton/free-discovery-call" className="flex justify-center w-full sm:w-max" variant="primary"/>
+            </div>
         </div>
     </Container>
 </section>

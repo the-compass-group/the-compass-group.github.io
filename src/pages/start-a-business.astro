@@ -34,15 +34,41 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
             </Container>
-            <Container className="mt-8 text-center">
-                <div>
-                    <Button variant={"primary"} className={"min-w-max"}>
-                        <span class="hidden sm:flex relative z-[5]">
-                            Book Your Free Discovery Call
-                        </span>
-                    </Button>
-                </div>
+            <Container className="mt-20 text-center">
+                <h3 class="pb-10 text-base text-center">Fill out the form below to get your free guide</h3>
+                <div data-form-slug="161697925320792" data-env="production" data-path="contact-us/161697925320792" class="keap-custom-form"></div>
             </Container>
         </section>
 	</main>
 </Layout>
+
+<script>
+    (function (window, document) {
+        const keapForms = window.keapForms || {
+            SNIPPET_VERSION: '1.1.0',
+            appId: 'kgg680',
+        };
+    
+        const script = document.createElement('script');
+    
+        script.type = 'text/javascript';
+        script.crossOrigin = 'anonymous';
+        script.defer = true;
+        script.src = 'https://forms.keap.app/lib/public-form-embed.js?appId=kgg680&version=1.1.0';
+    
+        script.onload = function () {
+            const keapFormsAfterLoad = window.keapForms;
+    
+            if (!keapFormsAfterLoad.renderAllForms) {
+                // eslint-disable-next-line no-console
+                console.error('[Keap Forms] Error: could not load');
+            } else if (!keapFormsAfterLoad.invoked) {
+                keapFormsAfterLoad.invoked = true;
+                keapFormsAfterLoad.renderAllForms();
+            }
+        };
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+    
+        firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
+        window.keapForms = keapForms;
+    }(window, document));</script>

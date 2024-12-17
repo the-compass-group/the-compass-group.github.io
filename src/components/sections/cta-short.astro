@@ -1,4 +1,5 @@
 ---
+import BtnLink from "../shared/BtnLink.astro";
 import Button from "../shared/Button.astro";
 ---
 
@@ -12,11 +13,7 @@ import Button from "../shared/Button.astro";
     </h2>
     <div class='mt-8 flex lg:flex-shrink-0'>
       <div class='inline-flex rounded-md'>
-          <Button variant={"primary"} className={"min-w-max"}>
-              <span class="hidden sm:flex relative z-[5]">
-                  Click here to Get Started
-              </span>
-          </Button>
+        <BtnLink text="Get Started Now" href="https://letsmeet.io/greggprockton/free-discovery-call" className="flex justify-center w-full sm:w-max" variant="primary"/>
       </div>
       <div class='ml-4 inline-flex rounded-md shadow lg:ml-3'>
       </div>

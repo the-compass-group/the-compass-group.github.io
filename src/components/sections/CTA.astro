@@ -1,4 +1,5 @@
 ---
+import BtnLink from "../shared/BtnLink.astro";
 import Button from "../shared/Button.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
@@ -34,6 +35,7 @@ import Paragraph from "../shared/Paragraph.astro";
             ></span>
           </div>
       </div>
+
       <div class="mx-auto text-center max-w-xl md:max-w-2xl relative">
         <h1
           class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight
@@ -48,10 +50,12 @@ import Paragraph from "../shared/Paragraph.astro";
             <li><span class="text-primary-800">Implement the plan</span> - I'll help you execute to unlock the success your business deserves</li>
           </ol>
         </Paragraph>
-        <div class="mx-auto max-w-md sm:max-w-xl pt-10">
-          <Button variant={"primary"}>
-            <span class="relative z-[5]">Book Your Free Discovery Call</span>
-          </Button>
+        <div class="flex">
+          <div class="mx-auto pt-10">
+            <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
+              <BtnLink text="Book Your Free Discovery Call" href="https://letsmeet.io/greggprockton/free-discovery-call" className="flex justify-center w-full sm:w-max" variant="primary"/>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -3,13 +3,14 @@ import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
 import { services } from "../../data/services.ts";
-import Button from "../shared/Button.astro";
 
 type ServicesProps = {
     title: string;
     description: string;
     icon: string;
     page: string;
+    buttonText: string;
+    buttonHref: string;
 };
 ---
 
@@ -24,19 +25,10 @@ type ServicesProps = {
             {
                 services.map((service: ServicesProps) => {
                     return (
-                        <Service title={service.title} description={service.description} icon={service.icon} page={service.page} />
+                        <Service title={service.title} description={service.description} icon={service.icon} page={service.page} buttonText={service.buttonText} buttonHref={service.buttonHref} />
                     );
                 })
             }
-        </div>
-    </Container>
-    <Container className="mt-8 text-center">
-        <div>
-            <Button variant={"primary"} className={"min-w-max"}>
-                <span class="hidden sm:flex relative z-[5]">
-                    Book Your Free Discovery Call
-                </span>
-            </Button>
         </div>
     </Container>
 </section>

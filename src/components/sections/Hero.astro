@@ -1,5 +1,5 @@
 ---
-import Button from "../shared/Button.astro";
+import BtnLink from "../shared/BtnLink.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import ByNumber from "./ByNumber.astro";
@@ -19,14 +19,12 @@ import ByNumber from "./ByNumber.astro";
             <Paragraph className="mt-8">
                 Stop doubting your entrepreneurial instincts. Engage in one-on-one coaching to clear the roadblocks and overcome the barriers in your way.
             </Paragraph>
-            <div class="mt-12 w-full">
-                <form action="#" class="w-full text-heading-3">
-                    <Button variant={"primary"} className={"min-w-max"}>
-                        <span class="hidden sm:flex relative z-[5]">
-                            Book Your Free Discovery Call
-                        </span>
-                    </Button>
-                </form>
+            <div class="mt-12 flex">
+                <div class="mx-auto">
+                    <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
+                        <BtnLink text="Book Your Free Discovery Call" href="https://letsmeet.io/greggprockton/free-discovery-call" className="flex justify-center w-full sm:w-max" variant="primary"/>
+                    </div>
+                </div>
             </div>
         </div>
 
