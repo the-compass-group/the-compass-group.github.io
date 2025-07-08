@@ -1,0 +1,74 @@
+---
+import Button from '../components/shared/Button.astro';
+import Container from '../components/shared/Container.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Compass Group">
+	<main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+        <section class="relative pt-32 lg:pt-48 dark:text-neutral-100">
+            <Container>
+                <h2 class="pb-4 text-4xl text-center">Owning a Business</h2>
+                <h3 class="pb-10 text-base text-center">DO ANY OF THESE RESONATE WITH YOU?</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+                        <div class="mt-6 space-y-4 relative text-center">
+                            <h4 class="pb-4 text-2xl">Overwhelmed?</h4>
+                            <p>Are you feeling overwhelmed in the day to day demands? Too much time working in your business and not on it?</p>
+                        </div>
+                        <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+                        <div class="mt-6 space-y-4 relative text-center">
+                            <h4 class="pb-4 text-2xl">Anxious?</h4>
+                            <p>Are you feeling anxious about cash flow? Expenses out of control? Hiring the wrong people?</p>
+                        </div>
+                        <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+                        <div class="mt-6 space-y-4 relative text-center">
+                            <h4 class="pb-4 text-2xl">Stuck?</h4>
+                            <p>Are you feeling like your business is stuck and you’re at a loss what to do next? Not sure how to take your business to the next level?</p>
+                        </div>
+                        <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+                    </div>
+                </div>
+            </Container>
+            <Container className="mt-8 text-center">
+                <h3 class="pb-10 text-base text-center">Fill out the form below to get your free guide</h3>
+                <div data-form-slug="2111191508407142" data-env="production" data-path="contact-us/2111191508407142" class="keap-custom-form"></div>
+            </Container>
+        </section>
+	</main>
+</Layout>
+
+<script>
+    (function (window, document) {
+        const keapForms = window.keapForms || {
+            SNIPPET_VERSION: '1.1.0',
+            appId: 'kgg680',
+        };
+    
+        const script = document.createElement('script');
+    
+        script.type = 'text/javascript';
+        script.crossOrigin = 'anonymous';
+        script.defer = true;
+        script.src = 'https://forms.keap.app/lib/public-form-embed.js?appId=kgg680&version=1.1.0';
+    
+        script.onload = function () {
+            const keapFormsAfterLoad = window.keapForms;
+    
+            if (!keapFormsAfterLoad.renderAllForms) {
+                // eslint-disable-next-line no-console
+                console.error('[Keap Forms] Error: could not load');
+            } else if (!keapFormsAfterLoad.invoked) {
+                keapFormsAfterLoad.invoked = true;
+                keapFormsAfterLoad.renderAllForms();
+            }
+        };
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+    
+        firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
+        window.keapForms = keapForms;
+    }(window, document));</script>

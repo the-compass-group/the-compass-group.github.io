@@ -1,7 +1,7 @@
 const services = [
     {
         title: "Owning a Small Business",
-        description: "Improve day-to-day operational outcomes and acheive success with your customers",
+        description: "Improve day-to-day operational outcomes and achieve success with your customers",
         page: "/owning-a-business",
         buttonText: "Learn More",
         buttonHref: "",
@@ -17,7 +17,7 @@ const services = [
     },
     {
         title: "Starting your own Business",
-        description: "Figure out what your businees needs to lift from 0 to 1 and then from 1 to scale with our help.",
+        description: "Figure out what your business needs to lift from 0 to 1 and then from 1 to scale with our help.",
         page: "/start-a-business",
         buttonText: "Click for More",
         buttonHref: "",
