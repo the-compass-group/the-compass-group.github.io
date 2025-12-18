@@ -110,6 +110,52 @@ const { title } = Astro.props;
       });
     }
   </script>
+  <script>
+    // Handle anchor link scrolling with offset for fixed header
+    function scrollToSection(hash) {
+      if (!hash) return;
+      
+      const targetId = hash.substring(1); // Remove the # symbol
+      const targetElement = document.getElementById(targetId);
+      const header = document.querySelector('header');
+      
+      if (targetElement && header) {
+        const headerHeight = header.offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = targetPosition - headerHeight;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // Handle clicks on anchor links
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      const anchor = target.closest('a[href*="#"]');
+      
+      if (anchor && anchor.href) {
+        // Check if it's a hash link (either #section or /#section)
+        const url = new URL(anchor.href, window.location.origin);
+        const isSamePage = url.pathname === window.location.pathname || url.pathname === '/';
+        
+        if (isSamePage && url.hash) {
+          e.preventDefault();
+          scrollToSection(url.hash);
+        }
+      }
+    });
+
+    // Handle hash in URL on page load
+    if (window.location.hash) {
+      // Small delay to ensure page is fully loaded
+      setTimeout(() => {
+        scrollToSection(window.location.hash);
+      }, 100);
+    }
+  </script>
 </html>
 <style is:global>
   :root {
