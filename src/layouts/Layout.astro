@@ -137,17 +137,19 @@ const { title } = Astro.props;
       const anchor = target.closest('a[href*="#"]');
       
       if (anchor && anchor.href) {
-        // Check if it's a hash link (either #section or /#section)
         const url = new URL(anchor.href, window.location.origin);
+        
+        // Only handle internal same-page hash links
+        const isInternal = url.origin === window.location.origin;
         const isSamePage = url.pathname === window.location.pathname || url.pathname === '/';
         
-        if (isSamePage && url.hash) {
+        if (isInternal && isSamePage && url.hash) {
           e.preventDefault();
           scrollToSection(url.hash);
         }
       }
     });
-
+    
     // Handle hash in URL on page load
     if (window.location.hash) {
       // Small delay to ensure page is fully loaded
