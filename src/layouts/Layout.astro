@@ -112,7 +112,7 @@ const { title } = Astro.props;
   </script>
   <script>
     // Handle anchor link scrolling with offset for fixed header
-    function scrollToSection(hash) {
+    function scrollToSection(hash: string) {
       if (!hash) return;
       
       const targetId = hash.substring(1); // Remove the # symbol
@@ -133,8 +133,8 @@ const { title } = Astro.props;
 
     // Handle clicks on anchor links
     document.addEventListener('click', (e) => {
-      const target = e.target;
-      const anchor = target.closest('a[href*="#"]');
+      if (!(e.target instanceof Element)) return;
+      const anchor = e.target.closest<HTMLAnchorElement>('a[href*="#"]');
       
       if (anchor && anchor.href) {
         const url = new URL(anchor.href, window.location.origin);
@@ -157,6 +157,9 @@ const { title } = Astro.props;
         scrollToSection(window.location.hash);
       }, 100);
     }
+  </script>
+  <script 
+    src="https://link.msgsndr.com/js/external-tracking.js" data-tracking-id="tk_8f33766a9c024936a50fc1285d19eec4">
   </script>
 </html>
 <style is:global>
